@@ -1,0 +1,27 @@
+[info]
+title=Formatters for CSS/SASS/SCSS/LESS
+desc=
+type=cudatext-plugin
+subdir=cuda_fmt_css_format
+homepage=https://github.com/CudaText-addons/cuda_fmt_css_format
+
+[fmt1]
+caption=CSS Beautify
+method=do_format
+lexers=CSS
+config=cuda_fmt_css_beautify.json
+
+[fmt2]
+caption=CSS Expand
+method=do_format_expand
+lexers=CSS,Sass,SCSS,LESS
+
+[fmt3]
+caption=CSS Compact
+method=do_format_compact
+lexers=CSS,Sass,SCSS,LESS
+
+[fmt4]
+caption=CSS Compress
+method=do_format_compress
+lexers=CSS,Sass,SCSS,LESS
