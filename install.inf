@@ -15,13 +15,16 @@ config=cuda_fmt_css_beautify.json
 caption=CSS Expand
 method=do_format_expand
 lexers=CSS,Sass,SCSS,LESS
+force_all=1
 
 [fmt3]
 caption=CSS Compact
 method=do_format_compact
 lexers=CSS,Sass,SCSS,LESS
+force_all=1
 
 [fmt4]
 caption=CSS Compress
 method=do_format_compress
 lexers=CSS,Sass,SCSS,LESS
+force_all=1
