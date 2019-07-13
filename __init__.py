@@ -3,6 +3,7 @@ import json
 from cuda_fmt import get_config_filename
 from . import cssbeautifier
 from . import cssformatter
+from . import csscompressor
 
 formatter = cssformatter.CssFormater()
 
@@ -37,3 +38,7 @@ def do_format_compact(text):
 def do_format_compress(text):
 
     return formatter.run(text, 'compress')
+
+def do_format_compressor(text):
+
+    return csscompressor.compress(text)

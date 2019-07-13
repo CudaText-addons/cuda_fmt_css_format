@@ -28,3 +28,9 @@ caption=CSS Compress
 method=do_format_compress
 lexers=CSS,Sass,SCSS,LESS
 force_all=1
+
+[fmt5]
+caption=CSS Compressor
+method=do_format_compressor
+lexers=CSS
+force_all=1
