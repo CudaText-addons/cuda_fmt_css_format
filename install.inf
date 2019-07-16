@@ -11,25 +11,83 @@ method=do_format
 lexers=CSS
 config=cuda_fmt_css_beautify.json
 
+
 [fmt2]
 caption=CSS Expand
 method=do_format_expand
-lexers=CSS,Sass,SCSS,LESS
+lexers=CSS
 force_all=1
 
 [fmt3]
-caption=CSS Compact
-method=do_format_compact
-lexers=CSS,Sass,SCSS,LESS
+caption=CSS Expand (Sass)
+method=do_format_expand
+lexers=Sass
 force_all=1
 
 [fmt4]
-caption=CSS Compress
-method=do_format_compress
-lexers=CSS,Sass,SCSS,LESS
+caption=CSS Expand (SCSS)
+method=do_format_expand
+lexers=SCSS
 force_all=1
 
 [fmt5]
+caption=CSS Expand (LESS)
+method=do_format_expand
+lexers=LESS
+force_all=1
+
+
+[fmt6]
+caption=CSS Compact
+method=do_format_compact
+lexers=CSS
+force_all=1
+
+[fmt7]
+caption=CSS Compact (Sass)
+method=do_format_compact
+lexers=Sass
+force_all=1
+
+[fmt8]
+caption=CSS Compact (SCSS)
+method=do_format_compact
+lexers=SCSS
+force_all=1
+
+[fmt9]
+caption=CSS Compact (LESS)
+method=do_format_compact
+lexers=LESS
+force_all=1
+
+
+[fmt10]
+caption=CSS Compress
+method=do_format_compress
+lexers=CSS
+force_all=1
+
+[fmt11]
+caption=CSS Compress (Sass)
+method=do_format_compress
+lexers=Sass
+force_all=1
+
+[fmt12]
+caption=CSS Compress (SCSS)
+method=do_format_compress
+lexers=SCSS
+force_all=1
+
+[fmt13]
+caption=CSS Compress (LESS)
+method=do_format_compress
+lexers=LESS
+force_all=1
+
+
+[fmt14]
 caption=CSS Compressor
 method=do_format_compressor
 lexers=CSS
