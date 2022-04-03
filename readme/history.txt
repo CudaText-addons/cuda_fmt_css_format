@@ -1,6 +1,9 @@
 
+2022.04.03
++ add: supported command "Minify" in the new CudaFormatter, ie marked 4 formatters here as 'minifiers'
+
 2019.07.17
-* split/rename 3 formatters to 12 (one formatter per lexer) 
+* change: split/rename 3 formatters to 12 (one formatter per lexer) 
 
 2019.07.13
 initial version

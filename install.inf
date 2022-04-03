@@ -67,24 +67,28 @@ caption=CSS Compress
 method=do_format_compress
 lexers=CSS
 force_all=1
+minifier=1
 
 [fmt11]
 caption=CSS Compress (Sass)
 method=do_format_compress
 lexers=Sass
 force_all=1
+minifier=1
 
 [fmt12]
 caption=CSS Compress (SCSS)
 method=do_format_compress
 lexers=SCSS
 force_all=1
+minifier=1
 
 [fmt13]
 caption=CSS Compress (LESS)
 method=do_format_compress
 lexers=LESS
 force_all=1
+minifier=1
 
 
 [fmt14]
