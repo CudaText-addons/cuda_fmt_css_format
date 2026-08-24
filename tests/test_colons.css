@@ -1,0 +1,6 @@
+:root {
+	color:blue;
+}
+a::before {
+	content:"123";
+}
