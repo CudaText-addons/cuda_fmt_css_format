@@ -44,15 +44,15 @@ class CssFormater():
 			comments = re.findall(commentReg, code)
 			code = re.sub(commentReg, '!comment!', code)
 
-		# Protect strings
-		stringReg = r'(content\s*:|[\w-]+\s*=)\s*(([\'\"]).*?\3)\s*'
-		strings = re.findall(stringReg, code)
-		code = re.sub(stringReg, r'\1!string!', code)
-
-		# Protect urls
-		urlReg = r'((?:url|url-prefix|regexp)\([^\)]+\))'
+		# Protect urls FIRST (to prevent stringReg from matching attributes inside SVG/HTML within URLs)
+		urlReg = r'((?:url|url-prefix|regexp)\s*\(\s*(?:[^\)\"\']|\"[^\"]*\"|\'[^\']*\')*\s*\))'
 		urls = re.findall(urlReg, code)
 		code = re.sub(urlReg, '!url!', code)
+
+		# Protect strings SECOND
+		stringReg = r'(content\s*:|[\w-]+\s*=)\s*(([\'"]).*?\3)\s*'
+		strings = re.findall(stringReg, code)
+		code = re.sub(stringReg, r'\1!string!', code)
 
 		# Pre process
 		code = re.sub(r'\s*([\{\}:;,])\s*', r'\1', code)	# remove \s before and after characters {}:;,
