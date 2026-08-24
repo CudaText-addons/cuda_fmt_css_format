@@ -55,7 +55,7 @@ class CssFormater():
 		code = re.sub(stringReg, r'\1!string!', code)
 
 		# Pre process
-		code = re.sub(r'\s*([\{\}:;,])\s*', r'\1', code)	# remove \s before and after characters {}:;,
+		code = re.sub(r'\s*([\{\};,])\s*', r'\1', code)		# remove \s before and after characters {};, (keep : for selectors)		
 		code = re.sub(r'([\[\(])\s*', r'\1', code)			# remove space inner [ or (
 		code = re.sub(r'\s*([\)\]])', r'\1', code)			# remove space inner ) or ]
 		# code = re.sub(r'(\S+)\s*([\+>~])\s*(\S+)', r'\1\2\3', code)	# remove \s before and after relationship selectors
@@ -168,7 +168,8 @@ class CssFormater():
 
 	# Compress Rules
 	def compress_rules(self, code):
-		code = re.sub(r'\s*([\{\}:;,])\s*', r'\1', code)					# remove \s before and after characters {}:;, again
+		code = re.sub(r'\s*([\{\};,])\s*', r'\1', code)						# remove \s before and after characters {};, (keep : for selectors)
+		code = re.sub(r'([a-zA-Z-]+)\s*:\s*([^;\{\}]+)([;\}])', r'\1:\2\3', code)	# remove \s around properties' : for minification
 		code = re.sub(r'\s+!important', '!important', code)					# remove space before !important
 		code = re.sub(r'((?:@charset|@import)[^;]+;)\s*', r'\1\n', code)	# add \n after @charset & @import
 

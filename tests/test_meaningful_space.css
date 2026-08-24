@@ -1,0 +1,3 @@
+:is(main,section,article) :first-child:is(h2,h3,h4) {
+	margin-top: 0;
+}
