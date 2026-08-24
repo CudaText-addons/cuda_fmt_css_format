@@ -245,10 +245,15 @@ class Beautifier:
                 printer.closeBracket()
                 insideRule = False
             elif self.ch == ":":
-                self.eatWhitespace()
                 if insideRule:
+                    self.eatWhitespace()
                     printer.colon()
                 else:
+                    # we are in selector (eg, :first-child или :is(...))
+                    # keep space before :
+                    # and DON'T add space after :
+                    if isAfterSpace:
+                        printer.singleSpace()
                     printer.push(":")
             elif self.ch == '"' or self.ch == '\'':
                 printer.push(self.eatString(self.ch))
