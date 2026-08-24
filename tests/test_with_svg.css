@@ -1,0 +1,22 @@
+.first_class {
+	content: "123";
+}
+.svg_class {
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M 20 25' stroke='grey' stroke-width='15' stroke-linecap='round'/></svg>");
+}
+/* after the inline SVG, strings in quotes will be replaced by parts of the SVG */
+input[type="text"] {
+	width: 100%;
+}
+details[open] {
+	background: azure;
+}
+img[alt='alttext'] {
+	border-radius: 10px;
+}
+.some_class {
+	content: "Test";
+	}
+li::before {
+	content: "/a0";
+	}
