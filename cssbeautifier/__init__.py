@@ -239,14 +239,17 @@ class Beautifier:
                 else:
                     printer.indent()
                     printer.openBracket()
+                insideRule = True
             elif self.ch == '}':
                 printer.outdent()
                 printer.closeBracket()
                 insideRule = False
             elif self.ch == ":":
                 self.eatWhitespace()
-                printer.colon()
-                insideRule = True
+                if insideRule:
+                    printer.colon()
+                else:
+                    printer.push(":")
             elif self.ch == '"' or self.ch == '\'':
                 printer.push(self.eatString(self.ch))
             elif self.ch == ';':
@@ -264,8 +267,8 @@ class Beautifier:
                     printer.push(self.ch)
                     self.eatWhitespace()
                     if self.next():
-                        if self.ch is not ')' and self.ch is not '"' \
-                        and self.ch is not '\'':
+                        if self.ch != ')' and self.ch != '"' \
+                        and self.ch != '\'':
                             printer.push(self.eatString(')'))
                         else:
                             self.pos = self.pos - 1
