@@ -1,3 +1,7 @@
+2026.08.24
+- fix: module 'cssbeautifier' broke CSS-files with e.g. ":aa" or "aa::bb"
+- fix: module 'csscompressor' broke CSS-files with inline SVG blocks
+- fix: module 'cssformatter' broke some URLs with spaces
 
 2022.04.03
 + add: supported command "Minify" in the new CudaFormatter, ie marked 4 formatters here as 'minifiers'
