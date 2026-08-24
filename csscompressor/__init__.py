@@ -237,7 +237,8 @@ def _compress(css, max_linelen=0, preserve_exclamation_comments=True):
     total_len = len(css)
 
     preserved_tokens = []
-    css = _preserve_call_tokens(css, _url_re, preserved_tokens, remove_ws=True)
+    # FIX: remove_ws=False to prevent breaking inline SVGs inside data URLs
+    css = _preserve_call_tokens(css, _url_re, preserved_tokens, remove_ws=False)
     css = _preserve_call_tokens(css, _calc_re, preserved_tokens, remove_ws=False)
     css = _preserve_call_tokens(css, _hsl_re, preserved_tokens, remove_ws=True)
 
