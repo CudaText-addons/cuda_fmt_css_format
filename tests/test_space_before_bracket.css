@@ -1,0 +1,5 @@
+@container container_name (width >= 20em) {
+	.class {
+		display: grid;
+	}
+}
