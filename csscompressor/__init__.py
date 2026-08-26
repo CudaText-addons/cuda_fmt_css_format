@@ -13,7 +13,7 @@
 
 
 __all__ = ('compress', 'compress_partitioned')
-__version__ = '0.9.4'
+__version__ = '0.9.4.2'
 
 
 import re
@@ -27,7 +27,7 @@ _str_re = re.compile(r'''("([^\\"]|\\.|\\)*")|('([^\\']|\\.|\\)*')''')
 _yui_comment_re = re.compile(r'___YUICSSMIN_PRESERVE_CANDIDATE_COMMENT_(?P<num>\d+)___')
 _ms_filter_re = re.compile(r'progid\:DXImageTransform\.Microsoft\.Alpha\(Opacity=', re.I)
 _spaces1_re = re.compile(r'(^|\})(([^\{:])+:)+([^\{]*\{)')
-_spaces2_re = re.compile(r'\s+([!{};:>+\(\)\],])')
+_spaces2_re = re.compile(r'\s+([!{};:>+\)\],])')
 _ie6special_re = re.compile(r':first-(line|letter)(\{|,)', re.I)
 _charset1_re = re.compile(r'^(.*)(@charset)\s+("[^"]*";)', re.I)
 _charset2_re = re.compile(r'^((\s*)(@charset)\s+([^;]+;\s*))+', re.I)
