@@ -1,8 +1,8 @@
 2026.08.26
 - fix: CSS Compressor removed meaningful space in `@container container_name (width >= 20em)` (thanks @d-mal)
-- fix: CSS Beautify broke CSS-files with e.g. ":aa" or "aa::bb" (thanks @d-mal)
-- fix: CSS Compressor broke CSS-files with inline SVG blocks (thanks @d-mal)
-- fix: formatters removed meaningful space here: `:is(main,section) :first-child:is(h2,h3,h4)` (thanks @d-mal)
+- fix: CSS Beautify inserted wrong spaces after colon in ":aa" or "aa::bb" (thanks @d-mal)
+- fix: CSS Compressor broke inline SVG blocks (thanks @d-mal)
+- fix: many formatters removed meaningful space between class names: `:is(main,section) :first-child:is(h2,h3,h4)` (thanks @d-mal)
 
 2022.04.03
 + add: supported command "Minify" in the new CudaFormatter, ie marked 4 formatters here as 'minifiers'
