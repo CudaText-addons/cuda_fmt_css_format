@@ -1,4 +1,5 @@
-2026.08.24
+2026.08.26
+- fix: CSS Compressor removed meaningful space in `@container container_name (width >= 20em)` (thanks @d-mal)
 - fix: CSS Beautify broke CSS-files with e.g. ":aa" or "aa::bb" (thanks @d-mal)
 - fix: CSS Compressor broke CSS-files with inline SVG blocks (thanks @d-mal)
 - fix: formatters removed meaningful space here: `:is(main,section) :first-child:is(h2,h3,h4)` (thanks @d-mal)
